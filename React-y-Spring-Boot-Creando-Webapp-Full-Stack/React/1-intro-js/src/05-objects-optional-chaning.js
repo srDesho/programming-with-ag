@@ -47,7 +47,7 @@ const invoice = {
 
 // console.log(invoice.company.name); // Veremos que nos dará error porque no existe esa propiedad company ni name.
 console.log(invoice.company?.name); // Usando el optional chaining(?) este nos devulve undefined
-console.log(invoice.client?.address?.name);
+console.log(invoice.client?.address?.name); // Lo mismo con anidaciones, simplemente agregamos otro signo "?"
 
 // El optional chaining equivale a esto
 if (invoice.company != undefined && invoice.company.name) {

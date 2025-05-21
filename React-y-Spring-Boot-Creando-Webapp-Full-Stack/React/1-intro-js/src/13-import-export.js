@@ -1,73 +1,7 @@
 
-const paper = {
-                product: 'paper',
-                price: 100,
-                quantity: 10,
-            };
-
-const invoices = [
-    {
-        id: 1,
-        name: 'Compras de oficina',
-        client: {
-            name: 'Juan',
-            lastname: 'López',
-        },
-        items: [
-            {
-                product: 'Keyboard',
-                price: 399,
-                quantity: 2,
-            },
-            {
-                product: 'mouse',
-                price: 200,
-                quantity: 1,
-            },
-            paper,
-        ],
-
-    },
-    {
-        id: 2,
-        name: 'Compras de computación',
-        client: {
-            name: 'Pedro',
-            lastname: 'López',
-        },
-        items: [
-            {
-                product: 'Keyboard',
-                price: 399,
-                quantity: 2,
-            },
-            {
-                product: 'Screen 17',
-                price: 800,
-                quantity: 1,
-            },
-        ],
-
-    },
-    {
-        id: 3,
-        name: 'Compras de papelería',
-        client: {
-            name: 'Santiago',
-            lastname: 'López',
-        },
-        items: [
-            {
-                product: 'pencil',
-                price: 50,
-                quantity: 1,
-            },
-            paper,
-        ],
-
-    },
-]
-
+// Para importar objetos, clases, funciones, usamos la palabra reservada import
+// Para importar objeto por defecto, sólo agregamos un nombre cualquiera antes de las {}
+import invoiceByIdDefault, { invoices, paper, invoiceByClientName } from './data/invoices';
 
 // El método MAP es similar al forEach con la diferencia de que el forEach 
 // sirve para ejecutar algo pero no retorna nada, para iterar, mostrar en el log.
@@ -130,5 +64,11 @@ console.log(deleteById);
 const result = invoices.some(i => i.client.name === ('Pedro'));
 console.log(result);
 
+// Usando la función invoiceByClientName importada
+console.log("Función importada invoiceByClientName")
+console.log(invoiceByClientName('Santiago'));
 
+// Usando la función por defecto importada
+console.log("Función importada por defecto")
+console.log(invoiceByIdDefault(2));
 

@@ -39,7 +39,7 @@ const invoice = {
 };
 
 // El spread operator nos sirve para clonar o exparsir todos los atributos que tiene un objeto.
-// Al usar el spread operator es como si instaciaramos un nuevo objeto como lo hacemos en java con la palabra new.
+// Al usar el spread operator es como si instanciaramos un nuevo objeto como lo hacemos en java con la palabra new.
 // Ojo que no es igual pero se tiene un nuevo objeto con los mismos atributos.
 
 // const invoice2 = invoice; // Cuando lo hacemos así y editamos algún atributo este se modifica en ambos.

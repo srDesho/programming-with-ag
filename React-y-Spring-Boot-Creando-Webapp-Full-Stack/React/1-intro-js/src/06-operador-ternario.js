@@ -1,4 +1,4 @@
-// Operador ternario, es como un if, pero siempre va a retornar algo que se será asigado a una variable.
+// Operador ternario, es como un if, pero siempre va a retornar algo que se será asignado a una variable.
 
 const average = 4.9;
 let status2 = '';

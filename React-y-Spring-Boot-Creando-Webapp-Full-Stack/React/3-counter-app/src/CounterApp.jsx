@@ -4,31 +4,24 @@
 
 import { useState } from "react";
 
-// Permiten gestionar el estado (useState), efectos secundarios (useEffect),
-// y otros comportamientos reactivos de forma modular.
-
-// Cada hook se ejecuta en el mismo orden en cada renderizado,
-// y solo afecta al componente que lo usa, evitando renders innecesarios.
-
-// También facilitan la reutilización de lógica de negocio entre componentes.
-
 export const CounterApp = () => {
+    // Definimos el estado 'counter' con un valor inicial de 0.
+    // 'counter' es la variable de estado y 'setCounter' la función para actualizarla.
+    const [counter, setCounter] = useState(0);
 
-    // Creamos nuestro hook counter que será llamada en el callback de onClick
-    const [counter, setCounter] = useState(0); // Definicimos un valor inicial en nuesto hook porque sino sería undefined.
-    
     const incrementCounter = () => {
-        // setCounter(counter + 1);
-        // Otra manera de hacerlo es con callback (RECOMENDADO).
+        // La forma recomendada de actualizar el estado es usando un callback.
+        // Esto asegura que siempre se trabaje con el valor más reciente del estado 'c',
+        // previniendo errores de sincronización en actualizaciones múltiples.
         setCounter(c => c + 1);
-    }
+    };
+
     return (
-    <>
-        <h2>El valor del contador es {counter}</h2>
-        {/* <button onClick={() => incrementCounter()}>Incrementar Contador +1</button> */}
-        {/* Podemos resumir la línea con lo sgte. */}
-        <button onClick={incrementCounter}>Incrementar contador +1</button>
-        
-    </>
+        <>
+            <h2>El valor del contador es {counter}</h2>
+            {/* Se asigna la función 'incrementCounter' al evento onClick. */}
+            {/* Es más eficiente pasar la referencia a la función directamente en lugar de una función anónima. */}
+            <button onClick={incrementCounter}>Incrementar contador +1</button>
+        </>
     );
-}
+};

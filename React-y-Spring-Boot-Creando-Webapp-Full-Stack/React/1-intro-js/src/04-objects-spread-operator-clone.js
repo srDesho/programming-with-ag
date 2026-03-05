@@ -56,4 +56,8 @@ console.log(invoice.id);
 console.log(invoice2.id);
 
 
+// Destructuring
+
+const {id, name, date, client: {name: nombreCliente }, items: [{product: producto}],} = invoice;
+console.log(`id de: ${id} con nombre ${name} and date ${date}, with client name: ${nombreCliente}, product name: ${producto}`);
 

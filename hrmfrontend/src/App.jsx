@@ -3,6 +3,7 @@ import './App.css'
 import ShowEmployee from './components/ShowEmployee'
 import AddEmployee from './components/AddEmployee'
 import EditEmployee from './components/EditEmployee'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
